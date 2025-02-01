@@ -27,6 +27,7 @@ def make_slipstream_iso():
         )
         + 2048
     )
+    output_size = round_up(int(output_size * 1.2), 2048)
     print(str(output_size))
     # Zero the output file
     res = os.system(
